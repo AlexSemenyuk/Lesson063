@@ -73,6 +73,6 @@ function changeTux (e) {
     let x = e.pageX - tux.offsetLeft;
     let y = e.pageY - tux.offsetTop;
     tux.style.left = x + "px";
-    tux.style.top = x + "px";
+    tux.style.top = y + "px";
     alert("Координаты: " + e.clientX + ":" + e.clientY);
 }
