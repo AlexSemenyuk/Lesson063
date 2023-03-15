@@ -48,3 +48,31 @@ function checkInput(event) {
         }
     }
 }
+
+Practice01
+const tux = document.getElementById('tux');
+tux.addEventListener('contextmenu', changeTux, false);
+
+const body = document.body;
+body.addEventListener('click', hideTux, false);
+body.addEventListener('contextmenu', showTux, false);
+
+function hideTux (e){
+    tux.style.display = `none`;
+}
+
+function showTux (e){
+    e.preventDefault(showTux);
+    tux.style.display = `block`;
+}
+
+function changeTux (e) {
+    e.preventDefault(changeTux);
+    tux.style.display = 'block';
+    tux.style.position = "relative";
+    let x = e.pageX - tux.offsetLeft;
+    let y = e.pageY - tux.offsetTop;
+    tux.style.left = x + "px";
+    tux.style.top = x + "px";
+    alert("Координаты: " + e.clientX + ":" + e.clientY);
+}
