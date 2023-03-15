@@ -1,0 +1,19 @@
+/* Common */
+:root {
+    /* text color */
+    --color-text-primary: rgba(0, 0, 0, 1);
+    --color-text-secondary: rgba(255, 255, 255, 1);
+
+    /* background */
+    --color-background-body: rgb(210, 210, 210, 1);
+    --color-background-initial-data: rgb(126, 196, 222);
+    --color-background-rezult: rgb(102, 213, 86);
+    /* text */
+    --text-primary: "Arial", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+

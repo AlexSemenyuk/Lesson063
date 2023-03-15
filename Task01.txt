@@ -1,0 +1,50 @@
+1. LINK01
+1.1 task01
+const button = document.getElementById('first');
+button.onclick = function () {
+    button.style.background = '#ff8';
+};
+1.2 task02
+const button = document.getElementById('w3c');
+button.addEventListener('click', () => {
+    button.style.background = '#ff8';
+});
+button.addEventListener('click', function () {
+    alert('Hello');
+});
+Ответ 
+var button = document.getElementById('w3c');
+button.addEventListener('click', function() {this.style.background = '#ff8';}, false);
+// Bonus:
+button.addEventListener('click', function() {alert('Hello');}, false);
+
+1.3 task03
+const img = document.getElementById('once_star');
+function a (){
+    alert('Hello');
+    img.removeEventListener('click', a);
+}
+img.addEventListener('click', a);
+1.4 task04
+const star = document.getElementsByTagName('img');
+for (const starElement of star) {
+    starElement.addEventListener('mouseover', () => {
+        starElement.src = "star_on.gif";
+    });
+}
+1.5 task05
+const phone = document.getElementById('phone');
+phone.addEventListener( 'keypress', checkInput, false );
+
+function checkInput(event) {
+    let charCode = event.charCode;
+    if (charCode != 0) {
+        if (charCode < 45 || (charCode > 45 && charCode < 48) || charCode > 57) {   
+            event.preventDefault();
+            alert(
+                "Пожалуйста, используйте только цифры и знак '-"
+                + "\n" + "charCode: " + charCode + "\n"
+            );
+        }
+    }
+}
